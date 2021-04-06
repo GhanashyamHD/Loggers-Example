@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+
+<body>
+	<script type ="text/javascript">
+		function validate(){
+			var name = document.f1.name.value;
+			var status = false;
+			if(name == ""){
+				
+				document.getElementById("namelocation").innerHTML = alert("Please enter your name");
+				document.getElementById("namelocation").innerHTML = "Required field"
+				status = false;
+			}
+			else{
+				document.getElementById("namelocation").innerHTML = "correct";
+				status= true;
+			}
+			return status;
+		}
+	</script>
+	<form name ="f1" action ="demo" onsubmit="return validate()">
+		Name : <input type ="text" name ="name"/><span id="namelocation" style="color: red"></span><br>
+			<input type ="submit" value="register">
+			</form>
+</body>
+</html>
